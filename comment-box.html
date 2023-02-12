@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add new comment</title>
+    <style></style>
+  </head>
+  <body>
+    <h1>how to add comment</h1>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt vitae
+        corporis nisi voluptate suscipit enim animi accusantium, earum
+        necessitatibus nihil assumenda tempora voluptas porro voluptates
+        delectus consequuntur! Cum, optio consectetur!
+      </p>
+      <p>
+        Corrupti natus pariatur dicta iusto illum error eius soluta distinctio
+        eum voluptates asperiores officia et, accusantium rerum tempore qui
+        expedita. Asperiores ducimus, obcaecati expedita iste debitis cum iure
+        nisi officiis.
+      </p>
+      <p>
+        Aut eligendi quidem cumque aperiam magnam nostrum consequuntur, cum,
+        voluptate rem illum vel! Itaque unde quo consequatur beatae iste, ea qui
+        voluptatem dolore, voluptatibus architecto rerum id accusantium
+        inventore totam?
+      </p>
+    </div>
+    <textarea name="" id="new-Comment" cols="50" rows="10"></textarea>
+    <br />
+    <button id="btn-post">Post</button>
+
+    <script>
+      // step 1: add addEventListener
+      document.getElementById('btn-post').addEventListener('click', function(){
+            const commentBox= document.getElementById('new-comment');
+            const newComment= commentBox.value;
+            console.log(newComment)
+        })
+    </script>
+  </body>
+</html>

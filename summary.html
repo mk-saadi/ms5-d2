@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Summary</title>
+    <style>
+        body{
+            margin-left: 3%;
+        }
+        .marquee{
+          transform: translate(67px, 10px) scale(.75) rotate(50deg);
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="handler-status">Default Text</h3>
+    <button onclick="handleOnClick()">
+      Handle Event By Add onclick Function
+    </button>
+    <br/>
+    <br>
+    <button id="event-listener">Handle Event By addEventListener</button>
+    <br>
+    <br>
+    <br>
+    <marquee id="input-text" behavior="" direction="right" class="marquee">Default Text</marquee>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+
+    <script>
+      // button 1/option 1
+      function handleOnClick() {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText = "innerText/onclick";
+      }
+
+      // button 2/option 2
+      document.getElementById("event-listener")
+      .addEventListener("click", function () {
+          const handlerStatus = document.getElementById("handler-status");
+          handlerStatus.innerText = "addEventListener";
+        });
+        
+        // button 3/option 2
+        document.getElementById("btn-update").addEventListener('click', function(){
+            const inputField= document.getElementById('input-field')
+            const inputText= inputField.value
+
+            const p= document.getElementById('input-text')
+            p.innerText= inputText
+            inputField.value= ''
+        })
+    </script>
+  </body>
+</html>

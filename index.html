@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Events</title>
+    <style>
+      body {
+        margin: 3%;
+      }
+      .marquee {
+        font-size: 3rem;
+        background-color: rgba(250, 128, 114, 0.466);
+        border-radius: 5px;
+      }
+      button {
+        display: grid;
+        font-size: 3rem;
+        color: salmon;
+        cursor: pointer;
+      }
+      .button1 {
+        font-size: 3rem;
+        color: salmon;
+        background-color: pink;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button2 {
+        font-size: 3rem;
+        color: salmon;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 onclick="console.log('he he boiiii')">Special Event</h1>
+      <br />
+      <marquee behavior="scroll" direction="right" class="marquee"
+        >This is a "onclick"</marquee
+      >
+      <!-- behavior="scroll/slide/alternate	" -->
+
+      <button onclick="console.log(7)" class="button1">Hit Me</button>
+      <br />
+
+      <button onclick="console.log('yamete kudasai')" class="button2">
+        Another Button
+      </button>
+      <br />
+
+      <button onclick="document.body.style.backgroundColor='grey'" title="grey">
+        grey
+      </button>
+      <br />
+
+      <button onclick="document.body.style.backgroundColor='white'">
+        white
+      </button>
+      <br />
+
+      <button onclick="makePink()">Pink</button>
+      <br />
+      <button onclick="makeBlue()">Blue</button>
+      <br />
+      <button id="makeViolet">Violet</button>
+      <br />
+      <button id="makeSalmon">Salmon</button>
+      <br />
+      <button id="make-yellow">Make Yellow</button>
+      <br />
+      <button id="make-red">Make Red</button>
+      <br />
+      <button id="margin-++">Left++</button>
+      <br />
+      <button id="margin---">Left--</button>
+    </main>
+
+    <script src="events.js"></script>
+    <script></script>
+  </body>
+</html>
